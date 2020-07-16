@@ -4,22 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Tips Calculator</title>
 </head>
 <body>
-    <script src="js.js"></script>
+   <p id="headofcalc">Tips Calculator</p>
     <div id="container">
+        
         <form>
             <p>How much money spent?</p>
+            <span>$</span>
             <input type="text" id="bill_amount" placeholder="Amount of money">
 
             <p>How was you waiter/waiteress?</p>
-            <select id="selector">
-                <option value="100">100&#37; &#45; Wonderful</option>
-                <option value="70">70&#37; &#45; Good</option>
-                <option value="50">50&#37; &#45; OK</option>
-                <option value="30">30&#37; &#45; Bad</option>
-                <option value="10">10&#37; &#45; Terrible</option>
+            <select id="service_quality">
+                <option value="0.25">100&#37; &#45; Wonderful</option>
+                <option value="0.2">70&#37; &#45; Good</option>
+                <option value="0.15">50&#37; &#45; OK</option>
+                <option value="0.1">30&#37; &#45; Bad</option>
+                <option value="0.05">10&#37; &#45; Terrible</option>
             </select>
 
             <p>How much people sharing the bill?</p>
@@ -27,11 +29,12 @@
 
             <button id="calculate" type="button">Calculate</button>
             
-            
-            <span id="tip"></span>
-            
-            
+            <div id="finalbill">
+                <span id="TotalTip">0.00</span>
+                <sup>$</sup>
+            </div>
         </form>
     </div>
+    <script src="js.js"></script>
 </body>
 </html>

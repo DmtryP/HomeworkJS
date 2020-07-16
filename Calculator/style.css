@@ -1,10 +1,23 @@
 body {
     margin-left: auto;
     margin-right: auto;
-    width: 300px
+    width: 300px;
+    
 }
 
+#headofcalc{
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    color: blue;
+    font-family: Circe;
+    font-weight: 900;
+    font-size: 30px;
+}
+
+
 #container {   
+    height: 265px;
     color: blue;
     width: 300px;
     text-align: center;
@@ -13,6 +26,12 @@ body {
     border-radius: 30px;
     font-family: Circe;
     font-weight: bold;
+}
+
+#service_quality{
+    width: 200px;
+    border-radius: 10px;
+
 }
 
 #calculate{
@@ -27,9 +46,7 @@ body {
 }
 
 #people_number {
+    width: 110px;
     border-radius: 10px;
 }
 
-#selector {
-    
-}
