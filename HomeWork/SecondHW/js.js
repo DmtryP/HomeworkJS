@@ -168,3 +168,23 @@ function Sum(num) {
     return (num - 1) % 9 + 1;
 }
 console.log(Sum(num));
+
+// 17 
+document.getElementById("hello").onclick = function hello(){
+  alert("Привет!");
+}
+
+// 18
+document.getElementById("changevalue").onclick = function changevalue(){
+  document.getElementById("18").value = "Второе значение";
+}
+
+// 19
+document.getElementById("modwindow").onclick = function hello(){
+  confirm("Я тут");
+}
+
+// 20
+document.getElementById("changecolor").onclick = function changecolor(){
+  document.getElementById("18").style.color = "blue";
+}
