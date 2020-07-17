@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <form id="form_container">
+    <p id="h1" >Калякулятор вашего ланча</p>
+    <div class="radio_button">
+        <p id="h2">Выберите размер коробки:</p>
+        
+        <input type="radio" name="size" id="small" value="small" checked>
+        <a >Маленький</a>
+        <div>
+        <input type="radio" name="size" id="large" value="large">
+        <a >Большой</a>
+        </div>
+    </div>
+
+    <div class="checkbox">
+        <p id="h2">Добавки:</p>
+        <input type="checkbox" name="add" id="pig" value="pig" >
+        <a >Свинина</a>
+        <input type="checkbox" name="add" id="meet" value="meet">
+        <a >Говядина</a>
+        <input type="checkbox" name="add" id="chicken" value="chicken">
+        <a >Курица</a>
+    </div>
+
+    <div class="checkbox">
+        <p id="h2">Топпинги:</p>
+        <input type="checkbox" name="add" id="bread_crumbs" value="bread_crumbs" > 
+        <a >Посыпать сухариками</a>
+        <input type="checkbox" name="add" id="extra_souse" value="extra_souse">
+        <a >Полить соусом</a>
+    </div>
+
+    <div id="kolvo">
+    <a id="h2">Количество ланчей:</a>
+    <input id="people_number" type="text" >
+    </div>
+
+    <div id="button_container">
+    <button id="button" type="submit">Добавить</button>
+    </div>
+
+   
+
+    <div>
+    <a>Стоимость:</a>
+    <snap id="price">0</snap><sub>₽</sub>
+    </div>
+
+    <div >
+    <a>Количество калорий:</a>
+    <snap id="calories">0</snap>
+    <a> в одном ланче</a>
+    </div>
+
+    <div >
+        <a>Корзина:</a>
+        <snap id="basket">0</snap><sub>₽</sub>
+        </div>
+    </form>
+
+
+    <script src="app.js"></script>
+</body>
+</html>

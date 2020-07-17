@@ -1,0 +1,59 @@
+#button_container{
+    height: 60px;
+    min-height: 100em;
+    display: table-cell;
+    vertical-align: middle
+}
+
+body {
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+}
+
+#form_container {   
+    height: 500px;
+    color: blue;
+    width: 400px;
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 30px;
+    font-family: Circe;
+    font-weight: bold;
+}
+
+#h1{
+    text-align: center;
+    font-weight: 800;
+    font-size: 28px;
+    height: 20px;
+    text-align: center;
+
+}
+
+#h2{
+    
+    font-weight: 600;
+    font-size: 20px;
+    height: 20px;
+    
+
+}
+
+#button{
+    border-radius: 10px;
+    background-color: blue;
+    color: white;
+    font-weight: 600;
+}
+
+#kolvo{
+    height: 75px;
+    min-height: 10em;
+    display: table-cell;
+    vertical-align: middle
+}
+
+#people_number{
+    width: 100px;
+}
