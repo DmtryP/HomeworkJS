@@ -1,0 +1,51 @@
+<DOCTYPE html!>
+
+    <head>
+        <title>GreatDay</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel = "Stylesheet" href = "style.css">
+        
+
+     </head>
+
+    <body>
+
+        <div id = "todo">
+            
+            <h1>Great Day <img id="plus_close" src="plus_close.png"></h1>
+            
+            <div id="FullInput">
+                <select id="priority" size="3" >
+                    <option  class="greenoption" value="green" selected></option>
+                    <option  class="yellowoption" value="yellow"></option>
+                    <option  class="redoption" value="red"></option>
+                    <input type = "text" placeholder="Новая задача">
+                    <input class="timeset" type="time" value="00:00">
+                </select>
+            </div>    
+            <ul class="todos">
+                
+            </ul>
+
+            <div id= "buttons">
+                <button class="save">Сохранить</button>
+                <button class="clear">Очистить</button>
+                <button class="tipBtn">Справка</button>
+            </div>
+        </div>
+
+        <div id = "overlay">
+           <a class="closebtn">&times;</a>
+           <ul class="tips">
+               <li></li>
+               <li>Нажмите на белый крестик, чтобы скрыть/показать поле создания новой задачи</li>
+               <li>Наберите текст в поле ввода и нажмите "Enter" для записи новой задачи</li>
+               <li>Зачеркните выполненные задачи кликом по тексту (Вы можете зачеркнуть время задачи отдельно от текста)</li>
+               <li>Нажмите на значок коризны для удаления задачи</li>
+               <li>Нажмите кнопку "Сохранить" для сохранения вашей новой задачи</li>
+               <li>Нажмите кнопку "Очистить" для быстрого удаления всех задач</li>
+            </ul>
+            
+        </div>
+        <script src="script.js"></script>
+    </body>
