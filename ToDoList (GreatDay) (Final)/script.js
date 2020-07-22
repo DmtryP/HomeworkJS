@@ -12,13 +12,16 @@ var saveBtn = document.querySelector(".save");
 var clearBtn = document.querySelector(".clear");
 var tipsBtn = document.querySelector(".tipBtn");
 var closeBtn = document.querySelector(".closeBtn");
-var overlay = document.getElementById("overlay")
+var overlay = document.getElementById("overlay");
+var weather = document.getElementById("weather_container");
+
 
 var date = new Date();
 
-function timeChange(png, firstCl, secondCl){
+function timeChange(png, firstCl, secondCl, weaterCl){
   body.style.background = `linear-gradient(${firstCl}, ${secondCl})`;
   h1.style.background = secondCl;
+  weather.style.background = weaterCl;
 
   for(var i=0; i < button.length; i++){
   button[i].style.background = `${secondCl}`;
@@ -38,7 +41,7 @@ switch (date.getHours()){
   case 3:
   case 4:
   case 5:
-    timeChange("night.png", "#a989d4", "#452e72");
+    timeChange("night.png", "#a989d4", "#452e72", "#352357");
     break;
 
   case 6:
@@ -46,7 +49,7 @@ switch (date.getHours()){
   case 8:
   case 9:
   case 10:
-    timeChange("morning_or_evening.png", "#ffb981", "#b653d2");
+    timeChange("morning_or_evening.png", "#ffb981", "#b653d2", "#883e9d");
     break;
 
   case 11:
@@ -56,7 +59,7 @@ switch (date.getHours()){
   case 15:
   case 16:
   case 17:
-    timeChange("day.png", "#c2f3f7", "#62bcfb");
+    timeChange("day.png", "#c2f3f7", "#62bcfb", "#4a8ebe" );
     break;
 
   
@@ -64,7 +67,7 @@ switch (date.getHours()){
   case 19:
   case 20:
   case 21:
-    timeChange("morning_or_evening.png", "#ffb981", "#b653d2");
+    timeChange("morning_or_evening.png", "#ffb981", "#b653d2", "#883e9d");
         break;
 }
 

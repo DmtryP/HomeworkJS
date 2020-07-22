@@ -3,7 +3,6 @@ body{
     font-family: Circe;
 
     }
-
 h1{
     text-transform: uppercase;
     height: 20px;
@@ -19,6 +18,13 @@ h1{
     
 }
 
+#weather_container{
+    height: 25px;
+    position: relative;
+    color: white;
+    margin: 0px;
+    text-align: center;
+}
 #plus_close{
     position: relative;
     left: 155px;
