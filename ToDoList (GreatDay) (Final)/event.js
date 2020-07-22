@@ -94,6 +94,7 @@ export function EndTodo(){
     );
 }
 
+var i=1;
 export function CloseShow(){
     plus_close.addEventListener('click', function(){
       

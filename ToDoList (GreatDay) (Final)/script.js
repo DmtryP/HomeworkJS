@@ -86,7 +86,7 @@ event.inputListener();
 
 event.EndTodo();
 
-var i=1;
+
 event.CloseShow();
 
 event.setToLocalS();
