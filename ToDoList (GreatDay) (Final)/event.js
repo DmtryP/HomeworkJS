@@ -3,9 +3,6 @@ var inputtime = document.querySelector("input[type = 'time']");
 var select = document.getElementById("priority");
 var ul = document.querySelector("ul");
 var body = document.querySelector("body");
-var h1 = document.querySelector("h1");
-var button = document.querySelectorAll("button");
-var container = document.querySelector("div");
 var spans = document.getElementsByTagName("span");
 var plus_close = document.querySelector("#plus_close");
 var saveBtn = document.querySelector(".save");
@@ -13,8 +10,8 @@ var clearBtn = document.querySelector(".clear");
 var tipsBtn = document.querySelector(".tipBtn");
 var closeBtn = document.querySelector(".closeBtn");
 var overlay = document.getElementById("overlay");
-var weather = document.getElementById("weather_container");
 
+// Удаление задачи
 export function deleteTodo(){
     for(let span of spans){
       span.addEventListener ("click",function (){
@@ -24,10 +21,11 @@ export function deleteTodo(){
     }
   }
 
+// Создвние задачи
 export function inputListener(){
     input.addEventListener("keypress",function(keyPressed){
       if(keyPressed.which === 13){
-        if(ul.offsetHeight <= (body.offsetHeight-320)){
+        if(ul.offsetHeight <= (body.offsetHeight-350)){
         var li = document.createElement("li");
   
         var texttag = document.createElement("spantext");
@@ -84,6 +82,7 @@ export function inputListener(){
     });
 }
 
+// Зачеркнуть задачу
 export function EndTodo(){
     ul.addEventListener('click', function(ev) {
           if(ev.target.tagName === 'SPANTEXT'){
@@ -95,6 +94,7 @@ export function EndTodo(){
 }
 
 var i=1;
+// Скрыть/Показать поле создания задачи
 export function CloseShow(){
     plus_close.addEventListener('click', function(){
       
@@ -111,6 +111,7 @@ export function CloseShow(){
     });
 }
 
+// Сохранить задачи в LocalStorage
 export function setToLocalS(){
     saveBtn.addEventListener('click',function(){
       localStorage.setItem('todoList',ul.innerHTML );
@@ -118,6 +119,7 @@ export function setToLocalS(){
     });
 }
 
+// Удаление задач из LocalStorage
 export function removefromLocalS(){
     clearBtn.addEventListener('click', function(){
       ul.innerHTML= "";
@@ -125,12 +127,14 @@ export function removefromLocalS(){
     });
   }
 
+// Показать Справку
   export function overlayshow(){
     tipsBtn.addEventListener("click",function(){
       overlay.style.height = "100%";
     });
   }
 
+// Скрыть Справку
   export function overlayhide(){
     closeBtn.addEventListener("click",function(e){
       e.preventDefault;

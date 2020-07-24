@@ -1,25 +1,16 @@
 import * as event from './event.js';
 
-var input = document.querySelector("input[type = 'text']");
-var inputtime = document.querySelector("input[type = 'time']");
-var select = document.getElementById("priority");
 var ul = document.querySelector("ul");
 var body = document.querySelector("body");
 var h1 = document.querySelector("h1");
 var button = document.querySelectorAll("button");
 var container = document.querySelector("div");
-var spans = document.getElementsByTagName("span");
-var plus_close = document.querySelector("#plus_close");
-var saveBtn = document.querySelector(".save");
-var clearBtn = document.querySelector(".clear");
-var tipsBtn = document.querySelector(".tipBtn");
-var closeBtn = document.querySelector(".closeBtn");
-var overlay = document.getElementById("overlay");
 var weather = document.getElementById("weather_container");
 
 
 var date = new Date();
 
+// Изменение стиля и изображения проекта
 function timeChange(png, firstCl, secondCl, weaterCl){
   body.style.background = `linear-gradient(${firstCl}, ${secondCl})`;
   h1.style.background = secondCl;
@@ -34,6 +25,7 @@ function timeChange(png, firstCl, secondCl, weaterCl){
   container.prepend(cityscape);
 }
 
+// Конструкция проверки времени и вызова timeChange(...)
 switch (date.getHours()){
   case 22:
   case 23:
@@ -75,6 +67,7 @@ switch (date.getHours()){
 
 event.deleteTodo();
 
+// Загрузка сохраненных задач из LocalStorage
 function loadTodo(){
   if(localStorage.getItem('todoList')){
     ul.innerHTML = localStorage.getItem('todoList');
@@ -86,7 +79,6 @@ event.inputListener();
 
 event.EndTodo();
 
-
 event.CloseShow();
 
 event.setToLocalS();
@@ -96,6 +88,5 @@ event.removefromLocalS();
 event.overlayshow();
 
 event.overlayhide();
-
 
 loadTodo();
